@@ -12,7 +12,7 @@ You can find a quick guide in the following [cheat sheet](https://www.markdowngu
 
 # Title of the project
 
-by: *Names of the authors*
+by: Mubariz Ahmed
 
 
 **Faculty of Technology and Bionics**
