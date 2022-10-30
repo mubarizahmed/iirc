@@ -13,7 +13,6 @@ The IR LEDs and sensor will work in tandem as the IR reciever-transmitter system
 
 To program the MCU, the USB-UART convertor will recieve signals from the USB connector and turn it into serial data for the ESP32. 
 
-
 ## Required Parts
 The following is a list of the key parts required:
 
@@ -31,4 +30,15 @@ The following is a list of the key parts required:
 Additionally, we will require resistors, capacitors and other passive components.
 
 ## Key Tasks
- key tasks to be added here
+- Ordering the listed components
+- Making the initial layout of PCB to get a basic idea of component placement
+- Translating said layout into a schematic
+- PCB design on Eagle
+- Testing on breadboards (once components are acquired):
+   * Testing the ESP32
+   * USB-UART converter testing
+   * Testing the IR sensors and LEDs
+   * Testing it all together
+- PCB manufacturing and assembly
+- Component soldering and mounting
+- Testing and evaluating 
