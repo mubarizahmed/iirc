@@ -27,28 +27,19 @@ A general schematic of the system is shown below:
 #### Options
 | Part | Pros | Cons | Pricing | Data Sheet|
 |-----|------|------|---------|-----------|
-|ESP32[^1]| <li>This <li> That | <li> | | |
-|TI[^2]|
+|ESP-Wroom-32E-N16[^1]|<li>BT enabled<li>Larger memory capacity<li>Community support and documentation| <li>Higher power consumption<li>Larger PCB footprint|3.60€|[ESP-WROOM-32E datasheet](https://www.mouser.de/datasheet/2/891/esp32_wroom_32e_esp32_wroom_32ue_datasheet_en-1855879.pdf)|
+|Texas Instruments CC3220SM2ARGKT[^2]|<li>Low consumption <li>Smaller PCB footprint|<li>No BT capability<li>Scarce documentation<li>Lower memory capacity|9.33€|[CC3220S datasheet](https://www.ti.com/lit/ds/symlink/cc3220r.pdf?HQS=dis-mous-null-mousermode-dsf-pf-null-wwe&ts=1667105625183&ref_url=https%253A%252F%252Fwww.ti.com%252Fgeneral%252Fdocs%252Fsuppproductinfo.tsp%253FdistId%253D26%2526gotoUrl%253Dhttps%253A%252F%252Fwww.ti.com%252Flit%252Fgpn%252Fcc3220r)| 
 
 
 #### Selection
-X was selected because
+The ESP32 was chosen as the MCU for this project. The ESP32 is a low-cost, low-power system on a chip microcontroller with integrated Wi-Fi and dual-mode Bluetooth. 
+
+It is a powerful, generic Wi-Fi+BT+BLE MCU module that targets a wide variety of applications, ranging from low-power sensor networks to the most demanding tasks, such as voice encoding, music streaming and MP3 decoding. The ESP32 is the successor to the popular ESP8266. The ESP32 is a perfect choice for this project as it has a built-in Wi-Fi and Bluetooth connectivity, which will be used to connect to the internet and control the devices. 
+
+The ESP32 also has a large memory capacity, which will be used to store the code and data. The ESP32 also has a low power consumption, which will be useful for the battery-powered system. The ESP32 also has a large number of GPIO pins, which will be used to connect the IR LEDs and sensor. The ESP32 also has a sleep mode, which will be used to conserve power when the system is not in use.
 
 
-### 2. IR LEDs
-#### Requirements
-- 
-- 
-
-#### Options
-| Part | Pros | Cons | Pricing | Data Sheet|
-|-----|------|------|---------|-----------|
-
-
-#### Selection
-X was selected because
-
-### 3. IR Reciever
+### 2. IR Reciever
 #### Requirements
 - Frequency range: 36.7kHz-38kHz [^4]
 - Electrostatic shield?
@@ -61,21 +52,19 @@ X was selected because
 #### Selection 
 X was selected because
 
-### 4. USB-UART Converter
+### 3. USB-UART Converter
 #### Requirements
 - Same voltage as MCU
-- 
 
 #### Options
 | Part | Pros | Cons | Pricing | Data Sheet|
 |-----|------|------|---------|-----------|
-|CP2102  | <li> | <li> | | |
-|CH340C [^8] | <li> | <li> | | |
-|FT232RL [^9]| <li> | <li> | | |
+|CP2102 [^8] |<li>Low power consumption<li>Smaller PCB footprint<li>|<li>Limited data transfer rates range<li>5V device, not same as the MCU of choice |[2,16 €](https://www.mouser.de/ProductDetail/Silicon-Labs/CP2102N-A02-GQFN24?qs=u16ybLDytRYKabtL%2FE7DZA%3D%3D)|[Datasheet](https://www.mouser.de/datasheet/2/368/cp2102n_datasheet-1634912.pdf)|
+|FT232R [^9]|<li>Supports bus powered, self-powered and highpower bus powered USB configurations<li>3.3V device, same as the MCU|<li>Higher price|[4.80€](https://www.mouser.de/ProductDetail/FTDI/FT232RL-REEL?qs=D1%2FPMqvA103RC6OU6bKtoA%3D%3D)|[Datasheet](https://ftdichip.com/wp-content/uploads/2020/08/DS_FT232R.pdf)| 
 
 
 #### Selection
-X was selected because
+The FT232R was chosen as the USB-UART converter for this project. The FT232R is a USB to serial UART interface with optional clock generator output. The FT232R is a perfect choice for this project as it is a 3.3V device, which is the same as the MCU. The FT232R also has a higher data transfer rate, which will be useful for the system.
 
 ## References
 [1]: [ESP Comparison](https://gist.github.com/sekcompsci/2bf39e715d5fe47579fa184fa819f421)
