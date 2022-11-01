@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
 <eagle version="9.6.2">
+<designblock>
+<description>&lt;h1&gt;ir_receiver_circuit&lt;/h1&gt;</description>
+<attributes>
+</attributes>
+<drawings>
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -239,16 +244,6 @@ Source: &lt;a href="http://www.vishay.com/docs/82491/tsop382.pdf"&gt; Datasheet 
 </sheets>
 </schematic>
 </drawing>
-<compatibility>
-<note version="8.2" severity="warning">
-Since Version 8.2, EAGLE supports online libraries. The ids
-of those online libraries will not be understood (or retained)
-with this version.
-</note>
-<note version="8.3" severity="warning">
-Since Version 8.3, EAGLE supports URNs for individual library
-assets (packages, symbols, and devices). The URNs of those assets
-will not be understood (or retained) with this version.
-</note>
-</compatibility>
+</drawings>
+</designblock>
 </eagle>

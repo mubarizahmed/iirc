@@ -69,8 +69,8 @@ The VS1838B was not selected as it is cheap but has poor documentation.
 #### Options
 | Part | Pros | Cons | Pricing | Data Sheet|
 |-----|------|------|---------|-----------|
-|CP2102 |<ul><li>Low power consumption<li>Smaller PCB footprint<li></ul>|<ul><li>Limited data transfer rates range<li>5V device, not same as the MCU of choice</ul> |[2.16€][CP2102 Price]|[CP2102 Datasheet]|
-|FT232R |<ul><li>Supports bus powered, self-powered and highpower bus powered USB configurations<li>3.3V device, same as the MCU|<li>Higher price</ul>|[4.80€]|[FT232R Datasheet]| 
+|CP2102 |<ul><li>Low power consumption<li>Smaller PCB footprint</ul>|<ul><li>Limited data transfer rates range<li>5V device, not same as the MCU of choice</ul> |[2.16€][CP2102 Price]|[CP2102 Datasheet]|
+|FT232R |<ul><li>Supports bus powered, self-powered and highpower bus powered USB configurations<li>3.3V device, same as the MCU|<ul><li>Higher price</ul>|[4.80€][FT232R Price]|[FT232R Datasheet]| 
 
 
 #### Selection
@@ -96,17 +96,29 @@ The FT232R was chosen as the USB-UART converter for this project. The FT232R is 
 | Part | Cost | Quantity  | Total |
 |------|------|-----------|-------|
 |ESP32-WROOM-32D| 3.50€ | 1 | 3.50€ |
-|TSOP38438| 1.16€ | 1 | 1.16€ |
-|FT232R| 4.80€ | 1 | 4.80€ |
+|TSOP38438 IR Receiver| 1.16€ | 1 | 1.16€ |
+|FT232R USB to UART| 4.80€ | 1 | 4.80€ |
+|LTE-4208 IR LEDs| 0.52€ | 3 | 1.56€ |
+|CMPT3904E Transistor | 0.44€ | 1 | 0.44€ |
+
 
 ## Schematics
 
 ### IR Receiver Circuit
-The IR reciver circuit is quite simple with the TSOP38438 pins connected to the 3.3V, GPIO, and GND pins of the ESP32. The circuit is shown below:
+The IR reciver circuit is quite simple with the TSOP38438 pins connected to the 3.3V, GND and GPIO pins of the ESP32. The circuit is shown below:
 
 ![IR Receiver Circuit](schematics/ir-receiver-circuit.png)
 
 The low-pass filter circuit for the input voltage shown in the [TSOP38438 Datasheet] was not included as we do not expect significant voltage ripple and our supply voltage is greater than 2.7V.
+
+## IR Transmitter Circuit
+The [LTE-4208 IR LED][LTE-4208 Datasheet]  is used in the transmitter circuit. It has a peak emission wavelength of 940nm, which is ideal for consumer electronics[^940NM]. A viewing angle of 20° means that we need three LEDs to get a good spread. Current limiting resistors of 100ohms are used to limit the current to about 20mA which is well below the continous forward current.  
+
+A low-side switch is used to turn on the IR LEDs. A SOT-23 package transistor is used that meets the requirement of I<sub>C</sub> > 200mA ([CMPT3904E][CMPT3904E Datasheet]).  The low-side switch is controlled by the ESP32 GPIO pin.
+
+The circuit is shown below:
+![IR Transmitter Circuit](schematics/ir-transmitter-circuit.png)
+
 
 ## References
 - [Low power Wifi MCU](https://hackaday.com/2018/12/17/a-deep-dive-into-low-power-wifi-microcontrollers/)
@@ -120,6 +132,10 @@ The low-pass filter circuit for the input voltage shown in the [TSOP38438 Datash
 
 - [IR Receivers - Vishay](https://www.mouser.com/pdfdocs/_ms6938.pdf)
 
+- [ESP32 Pinout Guide](https://randomnerdtutorials.com/esp32-pinout-reference-gpios/)
+
+- [Data Formats for IR Remote Control](https://www.vishay.com/docs/80071/dataform.pdf)
+
 ## Footnotes
 [^1]: [ESP Comparison](https://gist.github.com/sekcompsci/2bf39e715d5fe47579fa184fa819f421)
 
@@ -127,6 +143,8 @@ The low-pass filter circuit for the input voltage shown in the [TSOP38438 Datash
 
 [^AGC2]: ["AGC2™ was developed for typical remote control
 coding schemes with a reliable function in noisy environments"](https://www.vishay.com/docs/49860/0811wd_d.pdf)
+
+[^940NM]: [Infrared Waves, NASA](https://science.nasa.gov/ems/07_infraredwaves#:~:text=LEFT%3A%20A%20typical%20television%20remote,to%20that%20wavelength%20of%20radiation)
 
 [ESP-WROOM-32E Price]: https://www.mouser.de/ProductDetail/Espressif-Systems/ESP32-WROOM-32E-N16?qs=Li%252BoUPsLEnsC4cA%252BUYB2Bw%3D%3D
 [ESP-WROOM-32E Datasheet]: https://www.mouser.de/datasheet/2/891/esp32_wroom_32e_esp32_wroom_32ue_datasheet_en-1855879.pdf
@@ -144,7 +162,13 @@ coding schemes with a reliable function in noisy environments"](https://www.vish
 [VS1838B Datasheet]: https://www.elecrow.com/download/Infrared%20receiver%20vs1838b.pdf
 
 [CP2102 Price]: https://www.mouser.de/ProductDetail/Silicon-Labs/CP2102N-A02-GQFN24?qs=u16ybLDytRYKabtL%2FE7DZA%3D%3D
-[CP2102 Datasheet]: (https://www.mouser.de/datasheet/2/368/cp2102n_datasheet-1634912.pdf
+[CP2102 Datasheet]: https://www.mouser.de/datasheet/2/368/cp2102n_datasheet-1634912.pdf
 
 [FT232R Price]: https://www.mouser.de/ProductDetail/FTDI/FT232RL-REEL?qs=D1%2FPMqvA103RC6OU6bKtoA%3D%3D
 [FT232R Datasheet]: https://ftdichip.com/wp-content/uploads/2020/08/DS_FT232R.pdf
+
+[LTE-4208 Price]: https://www.mouser.de/ProductDetail/Lite-On/LTE-4208?qs=YmyZEYq5wW8LrIKlCQ2NxQ%3D%3D
+[LTE-4208 Datasheet]: https://www.mouser.de/datasheet/2/239/LTE-4208-1141639.pdf
+
+[CMPT3904E Price]: https://www.mouser.de/ProductDetail/Central-Semiconductor/CMPT3904E-TR-PBFREE?qs=u16ybLDytRZdO89O3AipsA%3D%3D
+[CMPT3904E Datasheet]: https://www.mouser.de/datasheet/2/68/CSEMS03188_1-2539213.pdf
