@@ -80,17 +80,22 @@ The FT232R was chosen as the USB-UART converter for this project. The FT232R is 
 ## Power Circuitry
 ### Requirements
 #### Component Power Budget
+- ESP32 - 1x 1.8W
+- IR LEDs - 3x 100mW
+- IR reciever - 10mW
+- HY2112 Battery Protection IC - 250mW   
+- RGB LED - 1x 240mW
+- LEDs - 2x 130mW
 
-
-#### Output Voltages
-3.3V
+ Total Power consumption = 2.86W
 
 ### Battery Selection
-#### Type
+As most of the components in the system will be powered by the battery, the battery will be the most important component in the system. The battery will be selected according to the total power demand of the system. The battery will also be selected according to the size and weight of the system. 
 
-#### Sizing
+Most of the components require a typical and continuous voltage of 3.3V, which means a total current pull of 0.876A. This means that a LiFEPO4 cell, with a typical capacity of 1500mAh, will be able to power the system for 1.7 hours. It also supplies the system with a nominal voltage of 3.2V, which is the same as the typical voltage of the components.
 
-### Voltage Regulation
+### Battery Protection Circuit
+Since the cell will be powering the system, it is important to protect the battery from over-current and over-discharging. The HY2112 is a low cost, low power, high accuracy, high reliability, high efficiency, and high accuracy battery protection IC. The HY2112 is a perfect choice for this project as it has a low power consumption and is easy to use.
 
 ## Bill of Materials
 | Part | Cost | Quantity  | Total |
@@ -103,6 +108,10 @@ The FT232R was chosen as the USB-UART converter for this project. The FT232R is 
 
 
 ## Schematics
+
+### Power Circuitry
+The power circuitry features the protection IC, HY2112. It is compatible with a single cell configuration, and will protect the battery from over-current and over discharging. It also features a capacitor, to stabilize the output of VDD, a high-rated resistor to limit the current in the event of a high voltage charger being connected.
+
 
 ### IR Receiver Circuit
 The IR reciver circuit is quite simple with the TSOP38438 pins connected to the 3.3V, GND and GPIO pins of the ESP32. The circuit is shown below:
@@ -118,6 +127,11 @@ A low-side switch is used to turn on the IR LEDs. A SOT-23 package transistor is
 
 The circuit is shown below:
 ![IR Transmitter Circuit](schematics/ir-transmitter-circuit.png)
+
+## USB-UART Circuit
+The [FT232R][FT232R Datasheet] is used in the USB-UART circuit. It will facilitate communications with the computer over the serial bus and help in programming the ESP32. The circuit is shown below: 
+
+![USB-UART Circuit](schematics/usb-uart.png)
 
 
 ## References
@@ -135,6 +149,9 @@ The circuit is shown below:
 - [ESP32 Pinout Guide](https://randomnerdtutorials.com/esp32-pinout-reference-gpios/)
 
 - [Data Formats for IR Remote Control](https://www.vishay.com/docs/80071/dataform.pdf)
+
+- [Battery Protection and Power Circuitry](https://www.electronics-lab.com/lifepo4-charger-board-based-on-cn3058e/)
+
 
 ## Footnotes
 [^1]: [ESP Comparison](https://gist.github.com/sekcompsci/2bf39e715d5fe47579fa184fa819f421)
@@ -171,4 +188,7 @@ coding schemes with a reliable function in noisy environments"](https://www.vish
 [LTE-4208 Datasheet]: https://www.mouser.de/datasheet/2/239/LTE-4208-1141639.pdf
 
 [CMPT3904E Price]: https://www.mouser.de/ProductDetail/Central-Semiconductor/CMPT3904E-TR-PBFREE?qs=u16ybLDytRZdO89O3AipsA%3D%3D
-[CMPT3904E Datasheet]: https://www.mouser.de/datasheet/2/68/CSEMS03188_1-2539213.pdf
+[CMPT3904E Datasheet]: https://www.mouser.de/datasheet/2/68/CSEMS03188_1-2539213.pdf 
+
+[ARGB1313HS-TR]: https://www.mouser.de/ProductDetail/Stanley-Electric/ARGB1313HS-TR?qs=byeeYqUIh0NONXvux5PuCw%3D%3D
+[ARGB1313HS-TR Datasheet]: https://www.mouser.de/datasheet/2/917/downloaddatafile-1504942.pdf
