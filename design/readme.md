@@ -96,6 +96,7 @@ Most of the components require a typical and continuous voltage of 3.3V, which m
 
 ### Battery Protection Circuit
 Since the cell will be powering the system, it is important to protect the battery from over-current and over-discharging. The HY2112 is a low cost, low power, high accuracy, high reliability, high efficiency, and high accuracy battery protection IC. The HY2112 is a perfect choice for this project as it has a low power consumption and is easy to use.
+Under and over current protection
 
 ## Bill of Materials
 | Part | Cost | Quantity  | Total |
@@ -104,7 +105,13 @@ Since the cell will be powering the system, it is important to protect the batte
 |TSOP38438 IR Receiver| 1.16€ | 1 | 1.16€ |
 |FT232R USB to UART| 4.80€ | 1 | 4.80€ |
 |LTE-4208 IR LEDs| 0.52€ | 3 | 1.56€ |
-|CMPT3904E Transistor | 0.44€ | 1 | 0.44€ |
+|S8050 Transistor | 0.21€ | 1 | 0.21€ |
+|UJ2-MIBH-G-SMT-TR Micro-USB connector | 0.45€ | 1 | 0.45€ |
+|CLP6C PLCC6 3-in-1 SMD LED | 0.66€ | 1 | 0.66€ |
+|-----|-----|-----|-----|
+|Total||  | 11.91|
+
+
 
 
 ## Schematics
@@ -128,10 +135,15 @@ A low-side switch is used to turn on the IR LEDs. A SOT-23 package transistor is
 The circuit is shown below:
 ![IR Transmitter Circuit](schematics/ir-transmitter-circuit.png)
 
+## Toggle LED, Power LED
+
 ## USB-UART Circuit
 The [FT232R][FT232R Datasheet] is used in the USB-UART circuit. It will facilitate communications with the computer over the serial bus and help in programming the ESP32. The circuit is shown below: 
 
 ![USB-UART Circuit](schematics/usb-uart.png)
+
+## Main Schematic
+![Main Schematic](schematics/uirrc.png)
 
 
 ## References
@@ -149,6 +161,10 @@ The [FT232R][FT232R Datasheet] is used in the USB-UART circuit. It will facilita
 - [ESP32 Pinout Guide](https://randomnerdtutorials.com/esp32-pinout-reference-gpios/)
 
 - [Data Formats for IR Remote Control](https://www.vishay.com/docs/80071/dataform.pdf)
+
+- [LiFePO4 BQ25171-Q1: Automotive, Standalone 800-mA Linear Battery Charger](https://www.ti.com/lit/ds/symlink/bq25171-q1.pdf?HQS=dis-mous-null-mousermode-dsf-pf-null-wwe&ts=1667331358610&ref_url=https%253A%252F%252Fwww.mouser.de%252F)
+
+- [esp32-pico-kit-v4_schematic](https://dl.espressif.com/dl/schematics/esp32-pico-kit-v4_schematic.pdf)
 
 - [Battery Protection and Power Circuitry](https://www.electronics-lab.com/lifepo4-charger-board-based-on-cn3058e/)
 
@@ -192,3 +208,9 @@ coding schemes with a reliable function in noisy environments"](https://www.vish
 
 [ARGB1313HS-TR]: https://www.mouser.de/ProductDetail/Stanley-Electric/ARGB1313HS-TR?qs=byeeYqUIh0NONXvux5PuCw%3D%3D
 [ARGB1313HS-TR Datasheet]: https://www.mouser.de/datasheet/2/917/downloaddatafile-1504942.pdf
+
+[S8050 Price]: https://www.mouser.de/ProductDetail/Micro-Commercial-Components-MCC/MMSS8050-H-TP?qs=FaVZESsvgndwiDXxXq5g0g%3D%3D
+[S8050 Datasheet]: https://www.mouser.de/datasheet/2/258/MMSS8050_SOT_23_-1626440.pdf
+
+[CLP6C Price]: (https://www.mouser.de/ProductDetail/Cree-LED/CLP6C-FKB-CM1Q1H1BB7R3R3?qs=UHyCXFkX5ExeH808uCrzYg%3D%3D)
+[CLP6C Datasheet]: (https://www.mouser.de/datasheet/2/723/Cree_07282021_CLP6CFKB-2498149.pdf)
