@@ -129,7 +129,7 @@ The IR reciver circuit is quite simple with the TSOP38438 pins connected to the 
 
 The low-pass filter circuit for the input voltage shown in the [TSOP38438 Datasheet] was not included as we do not expect significant voltage ripple and our supply voltage is greater than 2.7V.
 
-## IR Transmitter Circuit
+### IR Transmitter Circuit
 The [LTE-4208 IR LED][LTE-4208 Datasheet]  is used in the transmitter circuit. It has a peak emission wavelength of 940nm, which is ideal for consumer electronics[^940NM]. A viewing angle of 20° means that we need three LEDs to get a good spread. Current limiting resistors of 100ohms are used to limit the current to about 20mA which is well below the continous forward current.  
 
 A low-side switch is used to turn on the IR LEDs. A SOT-23 package transistor is used that meets the requirement of I<sub>C</sub> > 200mA ([CMPT3904E][CMPT3904E Datasheet]).  The low-side switch is controlled by the ESP32 GPIO pin.
@@ -137,17 +137,24 @@ A low-side switch is used to turn on the IR LEDs. A SOT-23 package transistor is
 The circuit is shown below:
 ![IR Transmitter Circuit](schematics/ir-transmitter-circuit.png)
 
-## Toggle LED, Power LED
+### Toggle LED, Power LED
 ![Status LEDs](schematics/status-leds.png)
 ## USB-UART Circuit
 The [FT232R][FT232R Datasheet] is used in the USB-UART circuit. It will facilitate communications with the computer over the serial bus and help in programming the ESP32. The circuit is shown below: 
 
 ![USB-UART Circuit](schematics/usb-uart.png)
 
-## Main Schematic
+### Button Matrix
+The button matrix is used to read the button presses. The button matrix is a 3x3 matrix of buttons. The circuit is shown below:
+
+![Button Matrix](schematics/button-matrix.png)
+Additinally, diodes can be used to isolate single button presses from multiple button presses.
+### Main Schematic
 ![Main Schematic](schematics/uirrc.png)
 
-
+## PCB Layout
+The PCB layout is shown below:
+![PCB Layout](schematics/pcb_1.png)
 ## References
 - [Low power Wifi MCU](https://hackaday.com/2018/12/17/a-deep-dive-into-low-power-wifi-microcontrollers/)
 
@@ -169,6 +176,10 @@ The [FT232R][FT232R Datasheet] is used in the USB-UART circuit. It will facilita
 - [esp32-pico-kit-v4_schematic](https://dl.espressif.com/dl/schematics/esp32-pico-kit-v4_schematic.pdf)
 
 - [Battery Protection and Power Circuitry](https://www.electronics-lab.com/lifepo4-charger-board-based-on-cn3058e/)
+
+- [Matrix Keypads](https://www.embeddedrelated.com/showarticle/519.php)
+
+- [Button Pad Hookup Guide](https://learn.sparkfun.com/tutorials/button-pad-hookup-guide/all)
 
 
 ## Footnotes
