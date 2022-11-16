@@ -20014,85 +20014,6 @@ Source: &lt;a href=""&gt; Datasheet &lt;/a&gt;</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="CLP6C-FKB-CM1Q1H1BB7R3R3">
-<description>&lt;Cree,LED,CLP6C-FKB-CM1Q1H1BB7R3R3 Cree CLP6C-FKB-CM1Q1H1BB7R3R3, CLP6 Series Green LED, 540 nm, PLCC 6, Round Lens SMD Package&lt;/b&gt;&lt;p&gt;
-&lt;author&gt;Created by SamacSys&lt;/author&gt;</description>
-<packages>
-<package name="CLP6CFKBCM1Q1H1BB7R3R3">
-<description>&lt;b&gt;LP6&lt;/b&gt;&lt;br&gt;
-</description>
-<smd name="1" x="-2.7" y="2.3" dx="3" dy="2" layer="1"/>
-<smd name="2" x="-2.7" y="0" dx="3" dy="1.6" layer="1"/>
-<smd name="3" x="-2.7" y="-2.3" dx="3" dy="2" layer="1"/>
-<smd name="4" x="2.7" y="-2.3" dx="3" dy="2" layer="1"/>
-<smd name="5" x="2.7" y="0" dx="3" dy="1.6" layer="1"/>
-<smd name="6" x="2.7" y="2.3" dx="3" dy="2" layer="1"/>
-<text x="0" y="0" size="1.27" layer="25" align="center">&gt;NAME</text>
-<text x="0" y="0" size="1.27" layer="27" align="center">&gt;VALUE</text>
-<wire x1="-2.5" y1="3" x2="2.5" y2="3" width="0.2" layer="51"/>
-<wire x1="2.5" y1="3" x2="2.5" y2="-3" width="0.2" layer="51"/>
-<wire x1="2.5" y1="-3" x2="-2.5" y2="-3" width="0.2" layer="51"/>
-<wire x1="-2.5" y1="-3" x2="-2.5" y2="3" width="0.2" layer="51"/>
-<wire x1="-5.2" y1="4.3" x2="5.2" y2="4.3" width="0.1" layer="51"/>
-<wire x1="5.2" y1="4.3" x2="5.2" y2="-4.3" width="0.1" layer="51"/>
-<wire x1="5.2" y1="-4.3" x2="-5.2" y2="-4.3" width="0.1" layer="51"/>
-<wire x1="-5.2" y1="-4.3" x2="-5.2" y2="4.3" width="0.1" layer="51"/>
-<wire x1="-2.813" y1="1.055" x2="-2.813" y2="1.055" width="0.032" layer="21"/>
-<wire x1="-2.813" y1="1.055" x2="-2.781" y2="1.055" width="0.032" layer="21" curve="180"/>
-<wire x1="-2.781" y1="1.055" x2="-2.781" y2="1.055" width="0.032" layer="21"/>
-<wire x1="-2.781" y1="1.055" x2="-2.813" y2="1.055" width="0.032" layer="21" curve="180"/>
-<wire x1="-1" y1="3" x2="1" y2="3" width="0.1" layer="21"/>
-<wire x1="-1" y1="-3" x2="1" y2="-3" width="0.1" layer="21"/>
-</package>
-</packages>
-<symbols>
-<symbol name="CLP6C-FKB-CM1Q1H1BB7R3R3">
-<wire x1="5.08" y1="2.54" x2="20.32" y2="2.54" width="0.254" layer="94"/>
-<wire x1="20.32" y1="-7.62" x2="20.32" y2="2.54" width="0.254" layer="94"/>
-<wire x1="20.32" y1="-7.62" x2="5.08" y2="-7.62" width="0.254" layer="94"/>
-<wire x1="5.08" y1="2.54" x2="5.08" y2="-7.62" width="0.254" layer="94"/>
-<text x="21.59" y="7.62" size="1.778" layer="95" align="center-left">&gt;NAME</text>
-<text x="21.59" y="5.08" size="1.778" layer="96" align="center-left">&gt;VALUE</text>
-<pin name="A_1" x="0" y="0" length="middle"/>
-<pin name="A_2" x="0" y="-2.54" length="middle"/>
-<pin name="A_3" x="0" y="-5.08" length="middle"/>
-<pin name="K_1" x="25.4" y="-5.08" length="middle" rot="R180"/>
-<pin name="K_2" x="25.4" y="-2.54" length="middle" rot="R180"/>
-<pin name="K_3" x="25.4" y="0" length="middle" rot="R180"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="CLP6C-FKB-CM1Q1H1BB7R3R3" prefix="LED">
-<description>&lt;b&gt;Cree,LED,CLP6C-FKB-CM1Q1H1BB7R3R3 Cree CLP6C-FKB-CM1Q1H1BB7R3R3, CLP6 Series Green LED, 540 nm, PLCC 6, Round Lens SMD Package&lt;/b&gt;&lt;p&gt;
-Source: &lt;a href="https://datasheet.datasheetarchive.com/originals/distributors/Datasheets-DGA13/1153926.pdf"&gt; Datasheet &lt;/a&gt;</description>
-<gates>
-<gate name="G$1" symbol="CLP6C-FKB-CM1Q1H1BB7R3R3" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="CLP6CFKBCM1Q1H1BB7R3R3">
-<connects>
-<connect gate="G$1" pin="A_1" pad="1"/>
-<connect gate="G$1" pin="A_2" pad="2"/>
-<connect gate="G$1" pin="A_3" pad="3"/>
-<connect gate="G$1" pin="K_1" pad="4"/>
-<connect gate="G$1" pin="K_2" pad="5"/>
-<connect gate="G$1" pin="K_3" pad="6"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="DESCRIPTION" value="Cree,LED,CLP6C-FKB-CM1Q1H1BB7R3R3 Cree CLP6C-FKB-CM1Q1H1BB7R3R3, CLP6 Series Green LED, 540 nm, PLCC 6, Round Lens SMD Package" constant="no"/>
-<attribute name="HEIGHT" value="2.6mm" constant="no"/>
-<attribute name="MANUFACTURER_NAME" value="Wolfspeed" constant="no"/>
-<attribute name="MANUFACTURER_PART_NUMBER" value="CLP6C-FKB-CM1Q1H1BB7R3R3" constant="no"/>
-<attribute name="MOUSER_PART_NUMBER" value="941-P6CFKBCM1Q1H17R3" constant="no"/>
-<attribute name="MOUSER_PRICE-STOCK" value="https://www.mouser.co.uk/ProductDetail/Cree-LED/CLP6C-FKB-CM1Q1H1BB7R3R3?qs=UHyCXFkX5ExeH808uCrzYg%3D%3D" constant="no"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="led" urn="urn:adsk.eagle:library:259">
 <description>&lt;b&gt;LEDs&lt;/b&gt;&lt;p&gt;
 &lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;&lt;br&gt;
@@ -22242,6 +22163,79 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/3/AYZ0102AGRLC.
 </deviceset>
 </devicesets>
 </library>
+<library name="CLVBA-FKA-CAEDH8BBB7A363">
+<description>&lt;Cree,LED,CLVBA-FKA-CAEDH8BBB7A363 Cree CLVBA-FKA-CAEDH8BBB7A363 Green LED, 540 nm PLCC 4, Round Lens SMD package&lt;/b&gt;&lt;p&gt;
+&lt;author&gt;Created by SamacSys&lt;/author&gt;</description>
+<packages>
+<package name="CLVBAFKACAEDH8BBB7A363">
+<description>&lt;b&gt;PLCC4_2a&lt;/b&gt;&lt;br&gt;
+</description>
+<smd name="1" x="-1.5" y="0.8" dx="1.4" dy="1.1" layer="1"/>
+<smd name="2" x="-1.5" y="-0.8" dx="1.4" dy="1.1" layer="1"/>
+<smd name="3" x="1.5" y="0.8" dx="1.4" dy="1.1" layer="1"/>
+<smd name="4" x="1.5" y="-0.8" dx="1.4" dy="1.1" layer="1"/>
+<text x="-0.228" y="0" size="1.27" layer="25" align="center">&gt;NAME</text>
+<text x="-0.228" y="0" size="1.27" layer="27" align="center">&gt;VALUE</text>
+<wire x1="-1.6" y1="1.4" x2="1.6" y2="1.4" width="0.2" layer="51"/>
+<wire x1="1.6" y1="1.4" x2="1.6" y2="-1.4" width="0.2" layer="51"/>
+<wire x1="1.6" y1="-1.4" x2="-1.6" y2="-1.4" width="0.2" layer="51"/>
+<wire x1="-1.6" y1="-1.4" x2="-1.6" y2="1.4" width="0.2" layer="51"/>
+<wire x1="-3.655" y1="2.4" x2="3.2" y2="2.4" width="0.1" layer="51"/>
+<wire x1="3.2" y1="2.4" x2="3.2" y2="-2.4" width="0.1" layer="51"/>
+<wire x1="3.2" y1="-2.4" x2="-3.655" y2="-2.4" width="0.1" layer="51"/>
+<wire x1="-3.655" y1="-2.4" x2="-3.655" y2="2.4" width="0.1" layer="51"/>
+<wire x1="-0.451" y1="1.4" x2="0.451" y2="1.4" width="0.2" layer="21"/>
+<wire x1="-0.451" y1="-1.4" x2="0.451" y2="-1.4" width="0.2" layer="21"/>
+<wire x1="-2.655" y1="0.813" x2="-2.655" y2="0.813" width="0.019" layer="21"/>
+<wire x1="-2.655" y1="0.813" x2="-2.636" y2="0.813" width="0.019" layer="21" curve="180"/>
+<wire x1="-2.636" y1="0.813" x2="-2.636" y2="0.813" width="0.019" layer="21"/>
+<wire x1="-2.636" y1="0.813" x2="-2.655" y2="0.813" width="0.019" layer="21" curve="180"/>
+</package>
+</packages>
+<symbols>
+<symbol name="CLVBA-FKA-CAEDH8BBB7A363">
+<wire x1="5.08" y1="2.54" x2="48.26" y2="2.54" width="0.254" layer="94"/>
+<wire x1="48.26" y1="-5.08" x2="48.26" y2="2.54" width="0.254" layer="94"/>
+<wire x1="48.26" y1="-5.08" x2="5.08" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="5.08" y1="2.54" x2="5.08" y2="-5.08" width="0.254" layer="94"/>
+<text x="49.53" y="7.62" size="1.778" layer="95" align="center-left">&gt;NAME</text>
+<text x="49.53" y="5.08" size="1.778" layer="96" align="center-left">&gt;VALUE</text>
+<pin name="RED_(CATHODE)" x="0" y="0" length="middle"/>
+<pin name="COMMON_ANODE" x="0" y="-2.54" length="middle"/>
+<pin name="BLUE_(CATHODE)" x="53.34" y="0" length="middle" rot="R180"/>
+<pin name="GREEN_(CATHODE)" x="53.34" y="-2.54" length="middle" rot="R180"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="CLVBA-FKA-CAEDH8BBB7A363" prefix="LED">
+<description>&lt;b&gt;Cree,LED,CLVBA-FKA-CAEDH8BBB7A363 Cree CLVBA-FKA-CAEDH8BBB7A363 Green LED, 540 nm PLCC 4, Round Lens SMD package&lt;/b&gt;&lt;p&gt;
+Source: &lt;a href="http://www.cree.com/led-components/media/documents/ds-CLVBA-FKA.pdf"&gt; Datasheet &lt;/a&gt;</description>
+<gates>
+<gate name="G$1" symbol="CLVBA-FKA-CAEDH8BBB7A363" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="CLVBAFKACAEDH8BBB7A363">
+<connects>
+<connect gate="G$1" pin="BLUE_(CATHODE)" pad="3"/>
+<connect gate="G$1" pin="COMMON_ANODE" pad="2"/>
+<connect gate="G$1" pin="GREEN_(CATHODE)" pad="4"/>
+<connect gate="G$1" pin="RED_(CATHODE)" pad="1"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DESCRIPTION" value="Cree,LED,CLVBA-FKA-CAEDH8BBB7A363 Cree CLVBA-FKA-CAEDH8BBB7A363 Green LED, 540 nm PLCC 4, Round Lens SMD package" constant="no"/>
+<attribute name="HEIGHT" value="2.1mm" constant="no"/>
+<attribute name="MANUFACTURER_NAME" value="Wolfspeed" constant="no"/>
+<attribute name="MANUFACTURER_PART_NUMBER" value="CLVBA-FKA-CAEDH8BBB7A363" constant="no"/>
+<attribute name="MOUSER_PART_NUMBER" value="941-VBAFKACAEDH8B7A3" constant="no"/>
+<attribute name="MOUSER_PRICE-STOCK" value="https://www.mouser.co.uk/ProductDetail/Cree-LED/CLVBA-FKA-CAEDH8BBB7a363?qs=3AcK5DacLboXYkg4biCgSA%3D%3D" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -22282,13 +22276,8 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/3/AYZ0102AGRLC.
 <part name="T3" library="transistor" library_urn="urn:adsk.eagle:library:402" deviceset="*-NPN-" device="SOT23-BEC" package3d_urn="urn:adsk.eagle:package:28748/2" technology="MMBT3904LT1"/>
 <part name="R5" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R1206" package3d_urn="urn:adsk.eagle:package:23540/2"/>
 <part name="R6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R1206" package3d_urn="urn:adsk.eagle:package:23540/2"/>
-<part name="LED4" library="CLP6C-FKB-CM1Q1H1BB7R3R3" deviceset="CLP6C-FKB-CM1Q1H1BB7R3R3" device=""/>
-<part name="R7" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R1206" package3d_urn="urn:adsk.eagle:package:23540/2"/>
-<part name="GND4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="+3V5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="GND6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R8" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R1206" package3d_urn="urn:adsk.eagle:package:23540/2"/>
-<part name="R9" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R1206" package3d_urn="urn:adsk.eagle:package:23540/2"/>
 <part name="R10" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R1206" package3d_urn="urn:adsk.eagle:package:23540/2" value="470"/>
 <part name="LED5" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="CHIPLED_1206" package3d_urn="urn:adsk.eagle:package:15823/2"/>
 <part name="GND7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -22338,6 +22327,10 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/3/AYZ0102AGRLC.
 <part name="+3V6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="GND18" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="S2" library="AYZ0102AGRLC" deviceset="AYZ0102AGRLC" device=""/>
+<part name="LED2" library="CLVBA-FKA-CAEDH8BBB7A363" deviceset="CLVBA-FKA-CAEDH8BBB7A363" device=""/>
+<part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R1206" package3d_urn="urn:adsk.eagle:package:23540/2" value="470"/>
+<part name="R3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R1206" package3d_urn="urn:adsk.eagle:package:23540/2" value="470"/>
+<part name="R4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R1206" package3d_urn="urn:adsk.eagle:package:23540/2" value="470"/>
 </parts>
 <sheets>
 <sheet>
@@ -22493,30 +22486,11 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/3/AYZ0102AGRLC.
 <attribute name="NAME" x="-96.52" y="-8.6614" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-96.52" y="-13.462" size="1.778" layer="96"/>
 </instance>
-<instance part="LED4" gate="G$1" x="198.12" y="96.52" smashed="yes" rot="R270">
-<attribute name="NAME" x="203.2" y="83.82" size="1.778" layer="95" align="center-left"/>
-<attribute name="VALUE" x="203.2" y="87.63" size="1.778" layer="96" align="center-left"/>
-</instance>
-<instance part="R7" gate="G$1" x="193.04" y="63.5" smashed="yes" rot="R270">
-<attribute name="NAME" x="187.96" y="66.2686" size="1.778" layer="95"/>
-<attribute name="VALUE" x="189.738" y="67.31" size="1.778" layer="96" rot="R270"/>
-</instance>
-<instance part="GND4" gate="1" x="195.58" y="52.07" smashed="yes">
-<attribute name="VALUE" x="193.04" y="49.53" size="1.778" layer="96"/>
-</instance>
 <instance part="+3V5" gate="G$1" x="-16.51" y="212.09" smashed="yes">
 <attribute name="VALUE" x="-13.97" y="208.28" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="GND6" gate="1" x="16.51" y="214.63" smashed="yes">
 <attribute name="VALUE" x="13.97" y="212.09" size="1.778" layer="96"/>
-</instance>
-<instance part="R8" gate="G$1" x="195.58" y="63.5" smashed="yes" rot="R270">
-<attribute name="NAME" x="187.96" y="63.7286" size="1.778" layer="95"/>
-<attribute name="VALUE" x="192.278" y="67.31" size="1.778" layer="96" rot="R270"/>
-</instance>
-<instance part="R9" gate="G$1" x="198.12" y="63.5" smashed="yes" rot="R270">
-<attribute name="NAME" x="187.96" y="61.1886" size="1.778" layer="95"/>
-<attribute name="VALUE" x="194.818" y="67.31" size="1.778" layer="96" rot="R270"/>
 </instance>
 <instance part="R10" gate="G$1" x="53.34" y="214.63" smashed="yes">
 <attribute name="NAME" x="49.53" y="216.1286" size="1.778" layer="95"/>
@@ -22691,6 +22665,22 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/3/AYZ0102AGRLC.
 <attribute name="NAME" x="-55.88" y="214.63" size="1.778" layer="95" rot="R90" align="center-left"/>
 <attribute name="VALUE" x="-58.42" y="214.63" size="1.778" layer="96" rot="R90" align="center-left"/>
 </instance>
+<instance part="LED2" gate="G$1" x="198.12" y="157.48" smashed="yes" rot="R270">
+<attribute name="NAME" x="190.5" y="148.59" size="1.778" layer="95" rot="R270" align="center-left"/>
+<attribute name="VALUE" x="187.96" y="148.59" size="1.778" layer="96" rot="R270" align="center-left"/>
+</instance>
+<instance part="R2" gate="G$1" x="182.88" y="104.14" smashed="yes">
+<attribute name="NAME" x="176.53" y="105.6386" size="1.778" layer="95"/>
+<attribute name="VALUE" x="176.53" y="95.758" size="1.778" layer="96"/>
+</instance>
+<instance part="R3" gate="G$1" x="182.88" y="101.6" smashed="yes">
+<attribute name="NAME" x="181.61" y="105.6386" size="1.778" layer="95"/>
+<attribute name="VALUE" x="181.61" y="95.758" size="1.778" layer="96"/>
+</instance>
+<instance part="R4" gate="G$1" x="182.88" y="99.06" smashed="yes">
+<attribute name="NAME" x="186.69" y="105.6386" size="1.778" layer="95"/>
+<attribute name="VALUE" x="186.69" y="95.758" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -22757,19 +22747,6 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/3/AYZ0102AGRLC.
 <wire x1="-17.78" y1="54.61" x2="-17.78" y2="52.07" width="0.1524" layer="91"/>
 <wire x1="-20.32" y1="54.61" x2="-17.78" y2="54.61" width="0.1524" layer="91"/>
 <junction x="-17.78" y="54.61"/>
-</segment>
-<segment>
-<pinref part="R7" gate="G$1" pin="2"/>
-<wire x1="193.04" y1="58.42" x2="193.04" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="193.04" y1="55.88" x2="195.58" y2="55.88" width="0.1524" layer="91"/>
-<pinref part="GND4" gate="1" pin="GND"/>
-<wire x1="195.58" y1="55.88" x2="195.58" y2="54.61" width="0.1524" layer="91"/>
-<wire x1="195.58" y1="55.88" x2="198.12" y2="55.88" width="0.1524" layer="91"/>
-<junction x="195.58" y="55.88"/>
-<pinref part="R9" gate="G$1" pin="2"/>
-<wire x1="198.12" y1="55.88" x2="198.12" y2="58.42" width="0.1524" layer="91"/>
-<pinref part="R8" gate="G$1" pin="2"/>
-<wire x1="195.58" y1="58.42" x2="195.58" y2="55.88" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <wire x1="58.42" y1="227.33" x2="58.42" y2="220.98" width="0.1524" layer="91"/>
@@ -22843,6 +22820,11 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/3/AYZ0102AGRLC.
 <pinref part="+3V1" gate="G$1" pin="+3V3"/>
 <wire x1="154.94" y1="139.7" x2="175.26" y2="139.7" width="0.1524" layer="91"/>
 <wire x1="175.26" y1="139.7" x2="175.26" y2="147.32" width="0.1524" layer="91"/>
+<pinref part="LED2" gate="G$1" pin="COMMON_ANODE"/>
+<wire x1="195.58" y1="157.48" x2="182.88" y2="157.48" width="0.1524" layer="91"/>
+<wire x1="182.88" y1="157.48" x2="182.88" y2="139.7" width="0.1524" layer="91"/>
+<wire x1="182.88" y1="139.7" x2="175.26" y2="139.7" width="0.1524" layer="91"/>
+<junction x="175.26" y="139.7"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="G$1" pin="VS"/>
@@ -23266,30 +23248,6 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/3/AYZ0102AGRLC.
 <label x="64.77" y="177.8" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
-<net name="N$9" class="0">
-<segment>
-<pinref part="U1" gate="G$1" pin="IO23"/>
-<wire x1="154.94" y1="99.06" x2="193.04" y2="99.06" width="0.1524" layer="91"/>
-<pinref part="LED4" gate="G$1" pin="A_3"/>
-<wire x1="193.04" y1="99.06" x2="193.04" y2="96.52" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$11" class="0">
-<segment>
-<pinref part="U1" gate="G$1" pin="IO22"/>
-<wire x1="154.94" y1="101.6" x2="195.58" y2="101.6" width="0.1524" layer="91"/>
-<pinref part="LED4" gate="G$1" pin="A_2"/>
-<wire x1="195.58" y1="101.6" x2="195.58" y2="96.52" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$13" class="0">
-<segment>
-<pinref part="U1" gate="G$1" pin="IO21"/>
-<wire x1="154.94" y1="104.14" x2="198.12" y2="104.14" width="0.1524" layer="91"/>
-<pinref part="LED4" gate="G$1" pin="A_1"/>
-<wire x1="198.12" y1="104.14" x2="198.12" y2="96.52" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="WIFI_EN" class="0">
 <segment>
 <label x="-38.1" y="208.28" size="1.27" layer="95" xref="yes"/>
@@ -23358,27 +23316,6 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/3/AYZ0102AGRLC.
 <label x="64.77" y="191.77" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
-<net name="N$14" class="0">
-<segment>
-<pinref part="LED4" gate="G$1" pin="K_1"/>
-<pinref part="R7" gate="G$1" pin="1"/>
-<wire x1="193.04" y1="71.12" x2="193.04" y2="68.58" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$15" class="0">
-<segment>
-<pinref part="LED4" gate="G$1" pin="K_2"/>
-<pinref part="R8" gate="G$1" pin="1"/>
-<wire x1="195.58" y1="71.12" x2="195.58" y2="68.58" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$16" class="0">
-<segment>
-<pinref part="LED4" gate="G$1" pin="K_3"/>
-<pinref part="R9" gate="G$1" pin="1"/>
-<wire x1="198.12" y1="71.12" x2="198.12" y2="68.58" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$18" class="0">
 <segment>
 <pinref part="R10" gate="G$1" pin="1"/>
@@ -23396,6 +23333,51 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/3/AYZ0102AGRLC.
 <pinref part="T1" gate="G$1" pin="C"/>
 <pinref part="R1" gate="G$1" pin="2"/>
 <wire x1="-71.12" y1="182.88" x2="-76.2" y2="182.88" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$3" class="0">
+<segment>
+<pinref part="R2" gate="G$1" pin="2"/>
+<pinref part="LED2" gate="G$1" pin="GREEN_(CATHODE)"/>
+<wire x1="187.96" y1="104.14" x2="195.58" y2="104.14" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$4" class="0">
+<segment>
+<pinref part="R3" gate="G$1" pin="2"/>
+<wire x1="187.96" y1="101.6" x2="198.12" y2="101.6" width="0.1524" layer="91"/>
+<pinref part="LED2" gate="G$1" pin="BLUE_(CATHODE)"/>
+<wire x1="198.12" y1="101.6" x2="198.12" y2="104.14" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$9" class="0">
+<segment>
+<pinref part="R4" gate="G$1" pin="2"/>
+<wire x1="187.96" y1="99.06" x2="203.2" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="203.2" y1="99.06" x2="203.2" y2="157.48" width="0.1524" layer="91"/>
+<pinref part="LED2" gate="G$1" pin="RED_(CATHODE)"/>
+<wire x1="203.2" y1="157.48" x2="198.12" y2="157.48" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$13" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="IO21"/>
+<pinref part="R2" gate="G$1" pin="1"/>
+<wire x1="154.94" y1="104.14" x2="177.8" y2="104.14" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$14" class="0">
+<segment>
+<pinref part="R3" gate="G$1" pin="1"/>
+<pinref part="U1" gate="G$1" pin="IO22"/>
+<wire x1="177.8" y1="101.6" x2="154.94" y2="101.6" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$15" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="IO23"/>
+<pinref part="R4" gate="G$1" pin="1"/>
+<wire x1="154.94" y1="99.06" x2="177.8" y2="99.06" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

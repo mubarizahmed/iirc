@@ -117,7 +117,9 @@ Under and over current protection
 ## Schematics
 
 ### Power Circuitry
-The power circuitry features the protection IC, HY2112. It is compatible with a single cell configuration, and will protect the battery from over-current and over discharging. It also features a capacitor, to stabilize the output of VDD, a high-rated resistor to limit the current in the event of a high voltage charger being connected.
+The power circuitry features 3 1.5V AAA Batteries, in a [pcb mounted holder][2479 AAA Battery Holder Price]. A [toggle switch][AYZ0102AGRLC Switch Price] is used switch the power supply on and off. The [MIC5205-3.3YM5-TR][MIC5205-3.3YM5-TR LDO Price] LDO voltage regulator is used to step-down the voltage to 3.3V. A 1.0µF output capacitor is used as described in the typical circuit provided in the [datasheet][MIC5205-3.3YM5-TR LDO Datasheet].
+
+![Power Circuitry](schematics/power-circuit.png)
 
 
 ### IR Receiver Circuit
@@ -216,3 +218,12 @@ coding schemes with a reliable function in noisy environments"](https://www.vish
 
 [CLP6C Price]: (https://www.mouser.de/ProductDetail/Cree-LED/CLP6C-FKB-CM1Q1H1BB7R3R3?qs=UHyCXFkX5ExeH808uCrzYg%3D%3D)
 [CLP6C Datasheet]: (https://www.mouser.de/datasheet/2/723/Cree_07282021_CLP6CFKB-2498149.pdf)
+
+[AYZ0102AGRLC Switch Price]:(https://www.mouser.de/ProductDetail/CK/AYZ0102AGRLC?qs=dJbzCyn%252BCFYWKwcWEToS6A%3D%3D)
+[AYZ0102AGRLC Switch Datasheet]:(https://www.mouser.de/datasheet/2/240/ayz-3051064.pdf)
+
+[2479 AAA Battery Holder Price]:(https://www.mouser.de/ProductDetail/Keystone-Electronics/2479?qs=Q3RoVmURDomBPD85HfXZoA%3D%3D)
+[2479 AAA Battery Holder Datasheet]:(https://www.mouser.de/datasheet/2/215/2479-741518.pdf)
+
+[MIC5205-3.3YM5-TR LDO Price]:(https://www.mouser.de/ProductDetail/Microchip-Technology-Atmel/MIC5205-3.3YM5-TR?qs=U6T8BxXiZAUfeWKvTx3acw%3D%3D)
+[MIC5205-3.3YM5-TR LDO Datasheet]:(https://www.mouser.de/datasheet/2/268/MIC5205_150mA_Low_Noise_LDO_Regulator_DS20005785C-2933204.pdf)
