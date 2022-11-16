@@ -80,14 +80,14 @@ The FT232R was chosen as the USB-UART converter for this project. The FT232R is 
 ## Power Circuitry
 ### Requirements
 #### Component Power Budget
-- ESP32 - 1x 1.8W
+- ESP32 - 1x 0.8W[^ESP32POWER]
 - IR LEDs - 3x 100mW
 - IR reciever - 10mW
 - HY2112 Battery Protection IC - 250mW   
 - RGB LED - 1x 240mW
 - LEDs - 2x 130mW
 
- Total Power consumption = 2.86W
+ Total Power consumption = 1.86W
 
 ### Battery Selection
 As most of the components in the system will be powered by the battery, the battery will be the most important component in the system. The battery will be selected according to the total power demand of the system. The battery will also be selected according to the size and weight of the system. 
@@ -136,7 +136,7 @@ The circuit is shown below:
 ![IR Transmitter Circuit](schematics/ir-transmitter-circuit.png)
 
 ## Toggle LED, Power LED
-
+![Status LEDs](schematics/status-leds.png)
 ## USB-UART Circuit
 The [FT232R][FT232R Datasheet] is used in the USB-UART circuit. It will facilitate communications with the computer over the serial bus and help in programming the ESP32. The circuit is shown below: 
 
@@ -178,6 +178,8 @@ The [FT232R][FT232R Datasheet] is used in the USB-UART circuit. It will facilita
 coding schemes with a reliable function in noisy environments"](https://www.vishay.com/docs/49860/0811wd_d.pdf)
 
 [^940NM]: [Infrared Waves, NASA](https://science.nasa.gov/ems/07_infraredwaves#:~:text=LEFT%3A%20A%20typical%20television%20remote,to%20that%20wavelength%20of%20radiation)
+
+[^ESP32POWER]: [ESP32 - Power Consumption by Power Modes](https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf#page=32)
 
 [ESP-WROOM-32E Price]: https://www.mouser.de/ProductDetail/Espressif-Systems/ESP32-WROOM-32E-N16?qs=Li%252BoUPsLEnsC4cA%252BUYB2Bw%3D%3D
 [ESP-WROOM-32E Datasheet]: https://www.mouser.de/datasheet/2/891/esp32_wroom_32e_esp32_wroom_32ue_datasheet_en-1855879.pdf
