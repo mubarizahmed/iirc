@@ -153,6 +153,14 @@ Additinally, diodes can be used to isolate single button presses from multiple b
 ![Main Schematic](schematics/uirrc.png)
 
 ## PCB Layout
+The guidelines for the PCB layout are as follows:
+- The PCB should be as small as possible
+- Test your schematic and board design with ERC and DRC checks in EAGLE.
+- Two via sizes available: 0.6 mm (drill 0.9 mm, pad 1.5 mm) and 1.0 mm (drill 1.5 mm, pad 2.5 mm).
+- Group name should be in the copper layer, for the industrially manufactured PCBs it should be in the silkscreen (e.g. layer 25).
+- As start 25 thou signal tracks, 50 thou power/gnd tracks (10-15 thou between pads - keep tracks thick – reducing size called “necking”)
+- Solid polygon fill preferred
+
 The PCB layout is shown below:
 ![PCB Layout](schematics/pcb_1.png)
 ## References
