@@ -1,0 +1,39 @@
+Partlist
+
+Exported from uirrc.brd at 17/11/2022 6:48 PM
+
+EAGLE Version 9.6.2 Copyright (c) 1988-2020 Autodesk, Inc.
+
+Assembly variant: 
+
+Part     Value                                Package                     Library                  Position (mil)        Orientation
+
+C1       1.0uF                                C1206                       rcl                      (1375 3050)           MR180
+IC1      TSOP38438                            TSOP38238                   TSOP38438                (625 2925)            R180
+IC2      MIC5205-3.3YM5-TR                    SOT95P280X145-5N            MIC5205-3.3YM5-TR        (1375 2875)           MR0
+JP1                                           1X04                        pinhead                  (1500 1725)           R180
+LED1     LTE-4208                             LTE4208                     LTE-4208                 (900 3075)            R180
+LED2                                          CHIPLED_1206                led                      (1375 2500)           R270
+LED3                                          CHIPLED_1206                led                      (1375 2075)           R270
+LED4     CLVBA-FKA-CAEDH8BBB7A363             CLVBAFKACAEDH8BBB7A363      CLVBA-FKA-CAEDH8BBB7A363 (200 2975)            R180
+R1       100                                  R1206                       rcl                      (900 2875)            MR270
+R2       471                                  R1206                       rcl                      (1450 2350)           R270
+R3       471                                  R1206                       rcl                      (1450 1925)           R270
+R4       471                                  R1206                       rcl                      (100 2725)            R90
+R5       471                                  R1206                       rcl                      (150 2500)            R90
+R6       471                                  R1206                       rcl                      (200 2275)            R90
+S1       AYZ0102AGRLC                         AYZ0102AGRLC                AYZ0102AGRLC             (1775 2925)           MR270
+S2       AYZ0102AGRLC                         AYZ0102AGRLC                AYZ0102AGRLC             (1775 2525)           R90
+S3       AYZ0102AGRLC                         AYZ0102AGRLC                AYZ0102AGRLC             (1775 2125)           R90
+SW1      OMRON_B3SN-3112POMRON_B3SN-3112P_0_0 OMRON_B3SN-3112P_0          Omron - B3SN-3112P       (350 1450)            R0
+SW2      OMRON_B3SN-3112POMRON_B3SN-3112P_0_0 OMRON_B3SN-3112P_0          Omron - B3SN-3112P       (950 1450)            R0
+SW3      OMRON_B3SN-3112POMRON_B3SN-3112P_0_0 OMRON_B3SN-3112P_0          Omron - B3SN-3112P       (1550 1450)           R0
+SW4      OMRON_B3SN-3112POMRON_B3SN-3112P_0_0 OMRON_B3SN-3112P_0          Omron - B3SN-3112P       (350 900)             R0
+SW5      OMRON_B3SN-3112POMRON_B3SN-3112P_0_0 OMRON_B3SN-3112P_0          Omron - B3SN-3112P       (950 900)             R0
+SW6      OMRON_B3SN-3112POMRON_B3SN-3112P_0_0 OMRON_B3SN-3112P_0          Omron - B3SN-3112P       (1550 900)            R0
+SW7      OMRON_B3SN-3112POMRON_B3SN-3112P_0_0 OMRON_B3SN-3112P_0          Omron - B3SN-3112P       (350 375)             R0
+SW8      OMRON_B3SN-3112POMRON_B3SN-3112P_0_0 OMRON_B3SN-3112P_0          Omron - B3SN-3112P       (950 375)             R0
+SW9      OMRON_B3SN-3112POMRON_B3SN-3112P_0_0 OMRON_B3SN-3112P_0          Omron - B3SN-3112P       (1550 375)            R0
+T1                                            SOT23-BEC                   transistor               (1150 2675)           MR0
+U1       2479                                 2479                        2479                     (950 1175)            MR90
+U2       ESP32-WROOM-32E_(16MB)               XCVR_ESP32-WROOM-32E_(16MB) ESP32-WROOM-32E__16MB_   (725 2275)            R0

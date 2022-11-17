@@ -144,8 +144,18 @@ The guidelines for the PCB layout are as follows:
 - As start 25 thou signal tracks, 50 thou power/gnd tracks (10-15 thou between pads - keep tracks thick – reducing size called “necking”)
 - Solid polygon fill preferred
 
-The PCB layout is shown below:
+- Restric layers around smd components?
+
+The PCB layout was first created using the autorouter:
+
 ![PCB Layout](schematics/pcb_1.png)
+
+As the result was not satisfactory, the layout was manually created. Traces of 25 thou (power) and 12 thou (signal) were used with vias of 23.622 mil. The final PCB layout is shown below:
+
+![PCB Layout](schematics/pcb_2.png)
+
+![PCB Layout](schematics/pcb_top.png)
+![PCB Layout](schematics/pcb_bottom.png)
 ## References
 - [Low power Wifi MCU](https://hackaday.com/2018/12/17/a-deep-dive-into-low-power-wifi-microcontrollers/)
 
