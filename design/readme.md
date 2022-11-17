@@ -62,56 +62,56 @@ The additional frequency range of the TSMP77000 was not required as the IR remot
 
 The VS1838B was not selected as it is cheap but has poor documentation.
 
-### 3. USB-UART Converter
+
+### 3. IR LED/Transmitter
 #### Requirements
-- Same voltage as MCU
+- Frequency range: 36.7kHz-38kHz [^4]
+- Low power consumption
 
 #### Options
 | Part | Pros | Cons | Pricing | Data Sheet|
 |-----|------|------|---------|-----------|
-|CP2102 |<ul><li>Low power consumption<li>Smaller PCB footprint</ul>|<ul><li>Limited data transfer rates range<li>5V device, not same as the MCU of choice</ul> |[2.16€][CP2102 Price]|[CP2102 Datasheet]|
-|FT232R |<ul><li>Supports bus powered, self-powered and highpower bus powered USB configurations<li>3.3V device, same as the MCU|<ul><li>Higher price</ul>|[4.80€][FT232R Price]|[FT232R Datasheet]| 
-
+|LTE-4208|<ul><li>Low power consumption <li>Good documentation </ul> | <ul><li>limited range of frequencies</ul>|[0.52€][LTE-4208 Price] |[LTE-4208 Datasheet]|
+|TSAL6400| <ul><li>Wide range of frequencies 20 kHz to 60 kHz <li>Good documentation </ul> | <ul><li> Higher power consumption </ul> | [0.47€][TSAL6400 Price]|[TSAL6400 Datasheet]|
 
 #### Selection
-The FT232R was chosen as the USB-UART converter for this project. The FT232R is a USB to serial UART interface with optional clock generator output. The FT232R is a perfect choice for this project as it is a 3.3V device, which is the same as the MCU. The FT232R also has a higher data transfer rate, which will be useful for the system.
+The LTE-4208 was selected as it has a low power consumption and good documentation. The TSAL6400 has a wide range of frequencies, but the range of frequencies for provided by the LTE-4208 are sufficient for the IR Reciever. 
+
+The TSAL6400 wasn't selected as it also has a higher power consumption. 
+
+
+### 4. USB-UART Converter module
+#### Requirements
+- Same voltage as MCU or have both 3.3V and 5V as options
+- USB 2.0/microUSB port onboard
+- Complete module, will be used off PCB (not part of BOM)
+
+#### Selection
+The CP2102 module was chosen as the USB-UART converter module. This module is needed to help program the MCU. The CP2102 is a USB to UART Bridge Controller with a Virtual COM Port interface. It is a complete module, and available at the labs, which means that it will be used off the PCB and hence won't be part of the BOM. The CP2102 also has a USB 2.0/microUSB port onboard. The CP2102 was chosen as it has been often used with the ESP32. The schematic for the connection to the module is shown at: [USB-UART Circuit](schematics/usb-uart.png)
 
 
 ## Power Circuitry
-### Requirements
-#### Component Power Budget
-- ESP32 - 1x 0.8W[^ESP32POWER]
-- IR LEDs - 3x 100mW
-- IR reciever - 10mW
-- HY2112 Battery Protection IC - 250mW   
-- RGB LED - 1x 240mW
-- LEDs - 2x 130mW
-
- Total Power consumption = 1.86W
-
 ### Battery Selection
-As most of the components in the system will be powered by the battery, the battery will be the most important component in the system. The battery will be selected according to the total power demand of the system. The battery will also be selected according to the size and weight of the system. 
+As most of the components in the system will be powered by the battery, the battery will be the most important component in the system. The chosen battery type for this project is a typical AAA battery. Each one provides 1.5V, and there will be 3 of these employed. This gives the MCU enough operating voltage, as well as to the rest of the system. But this will be stepped down using a voltage regulator. 
 
-Most of the components require a typical and continuous voltage of 3.3V, which means a total current pull of 0.876A. This means that a LiFEPO4 cell, with a typical capacity of 1500mAh, will be able to power the system for 1.7 hours. It also supplies the system with a nominal voltage of 3.2V, which is the same as the typical voltage of the components.
+### Voltage Regulator
+To help step down the 4.5V from the 3x AAA batteries, the [MIC5205-3.3YM5-TR][MIC5205-3.3YM5-TR LDO Datasheet] will be used. This is a LDO voltage step-down regulator. It will step the 4.5V down to 3.3V, which is the acceptable operating voltage for the ESP32.
 
-### Battery Protection Circuit
-Since the cell will be powering the system, it is important to protect the battery from over-current and over-discharging. The HY2112 is a low cost, low power, high accuracy, high reliability, high efficiency, and high accuracy battery protection IC. The HY2112 is a perfect choice for this project as it has a low power consumption and is easy to use.
-Under and over current protection
 
 ## Bill of Materials
+- *Does not include components available at the labs.*  
+
 | Part | Cost | Quantity  | Total |
 |------|------|-----------|-------|
-|ESP32-WROOM-32D| 3.50€ | 1 | 3.50€ |
-|TSOP38438 IR Receiver| 1.16€ | 1 | 1.16€ |
-|FT232R USB to UART| 4.80€ | 1 | 4.80€ |
-|LTE-4208 IR LEDs| 0.52€ | 3 | 1.56€ |
-|S8050 Transistor | 0.21€ | 1 | 0.21€ |
-|UJ2-MIBH-G-SMT-TR Micro-USB connector | 0.45€ | 1 | 0.45€ |
-|CLP6C PLCC6 3-in-1 SMD LED | 0.66€ | 1 | 0.66€ |
-|-----|-----|-----|-----|
-|Total||  | 11.91|
-
-
+|ESP-Wroom-32E-N16|3.60€|1| 3.60€ |
+|2479 AAA battery holder|1.54€|1| 1.54€ |
+|Logilink AAA battery|1.85€|8| 1.85€ | 
+|TSOP38438 IR Reciever|1.16€|1| 1.16€ |
+|AYZ0102AGRLC toggle switch|1.02€ |1| 1.02€ |
+|LTE-4208 IR LED|0.52€|3|1.56€|
+|CMPT3904E switch|0.44€|1|0.44€|
+|MIC5205-3.3YM5-TR LDO Voltage Regulator |0.36€|1|0.36€|
+|Total|--|--|11.53€|
 
 
 ## Schematics
@@ -140,7 +140,7 @@ The circuit is shown below:
 ### Toggle LED, Power LED
 ![Status LEDs](schematics/status-leds.png)
 ## USB-UART Circuit
-The [FT232R][FT232R Datasheet] is used in the USB-UART circuit. It will facilitate communications with the computer over the serial bus and help in programming the ESP32. The circuit is shown below: 
+The CP2102 USB-UART module will be used to program the ESP32. The schematic for the connection to the module is shown below:
 
 ![USB-UART Circuit](schematics/usb-uart.png)
 
@@ -246,3 +246,6 @@ coding schemes with a reliable function in noisy environments"](https://www.vish
 
 [MIC5205-3.3YM5-TR LDO Price]:(https://www.mouser.de/ProductDetail/Microchip-Technology-Atmel/MIC5205-3.3YM5-TR?qs=U6T8BxXiZAUfeWKvTx3acw%3D%3D)
 [MIC5205-3.3YM5-TR LDO Datasheet]:(https://www.mouser.de/datasheet/2/268/MIC5205_150mA_Low_Noise_LDO_Regulator_DS20005785C-2933204.pdf)
+
+[TSAL6400 Price]:(https://eu.mouser.com/ProductDetail/Vishay-Semiconductors/TSAL6400?qs=oSAwVt7aKTHCOCv1ythi7g%3D%3D)
+[TSAL6400 Datasheet]:(https://eu.mouser.com/datasheet/2/427/tsal6400-1766599.pdf)
