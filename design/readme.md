@@ -97,23 +97,6 @@ As most of the components in the system will be powered by the battery, the batt
 ### Voltage Regulator
 To help step down the 4.5V from the 3x AAA batteries, the [MIC5205-3.3YM5-TR][MIC5205-3.3YM5-TR LDO Datasheet] will be used. This is a LDO voltage step-down regulator. It will step the 4.5V down to 3.3V, which is the acceptable operating voltage for the ESP32.
 
-
-## Bill of Materials
-- *Does not include components available at the labs.*  
-
-| Part | Cost | Quantity  | Total |
-|------|------|-----------|-------|
-|ESP-Wroom-32E-N16|3.60€|1| 3.60€ |
-|2479 AAA battery holder|1.54€|1| 1.54€ |
-|Logilink AAA battery|1.85€|8| 1.85€ | 
-|TSOP38438 IR Reciever|1.16€|1| 1.16€ |
-|AYZ0102AGRLC toggle switch|1.02€ |1| 1.02€ |
-|LTE-4208 IR LED|0.52€|3|1.56€|
-|CMPT3904E switch|0.44€|1|0.44€|
-|MIC5205-3.3YM5-TR LDO Voltage Regulator |0.36€|1|0.36€|
-|Total|--|--|11.53€|
-
-
 ## Schematics
 
 ### Power Circuitry
