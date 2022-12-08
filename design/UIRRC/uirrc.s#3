@@ -13106,10 +13106,6 @@ Created by Upverter.com</description>
 <wire x1="-3.15" y1="3.15" x2="3.15" y2="3.15" width="0.15" layer="51"/>
 <wire x1="3.15" y1="3.15" x2="3.15" y2="-3.15" width="0.15" layer="51"/>
 <wire x1="3.15" y1="-3.15" x2="-3.15" y2="-3.15" width="0.15" layer="51"/>
-<wire x1="-4.85" y1="-3.25" x2="-4.85" y2="3.25" width="0.1" layer="41"/>
-<wire x1="-4.85" y1="3.25" x2="4.85" y2="3.25" width="0.1" layer="41"/>
-<wire x1="4.85" y1="3.25" x2="4.85" y2="-3.25" width="0.1" layer="41"/>
-<wire x1="4.85" y1="-3.25" x2="-4.85" y2="-3.25" width="0.1" layer="41"/>
 <wire x1="-3.15" y1="3.15" x2="3.15" y2="3.15" width="0.15" layer="21"/>
 <wire x1="3.15" y1="-3.15" x2="3.15" y2="-3.075" width="0.15" layer="21"/>
 <wire x1="3.15" y1="3.075" x2="3.15" y2="3.15" width="0.15" layer="21"/>
@@ -13399,17 +13395,17 @@ Created by Upverter.com</description>
 <attribute name="NAME" x="190.5" y="148.59" size="1.778" layer="95" rot="R270" align="center-left"/>
 <attribute name="VALUE" x="187.96" y="148.59" size="1.778" layer="96" rot="R270" align="center-left"/>
 </instance>
-<instance part="R4" gate="G$1" x="182.88" y="104.14" smashed="yes">
-<attribute name="NAME" x="176.53" y="105.6386" size="1.778" layer="95"/>
-<attribute name="VALUE" x="176.53" y="95.758" size="1.778" layer="96"/>
+<instance part="R4" gate="G$1" x="182.88" y="93.98" smashed="yes">
+<attribute name="NAME" x="176.53" y="90.3986" size="1.778" layer="95"/>
+<attribute name="VALUE" x="186.69" y="90.678" size="1.778" layer="96"/>
 </instance>
-<instance part="R5" gate="G$1" x="182.88" y="101.6" smashed="yes">
-<attribute name="NAME" x="181.61" y="105.6386" size="1.778" layer="95"/>
-<attribute name="VALUE" x="181.61" y="95.758" size="1.778" layer="96"/>
+<instance part="R5" gate="G$1" x="182.88" y="96.52" smashed="yes">
+<attribute name="NAME" x="176.53" y="98.0186" size="1.778" layer="95"/>
+<attribute name="VALUE" x="186.69" y="98.298" size="1.778" layer="96"/>
 </instance>
-<instance part="R6" gate="G$1" x="182.88" y="99.06" smashed="yes">
-<attribute name="NAME" x="186.69" y="105.6386" size="1.778" layer="95"/>
-<attribute name="VALUE" x="186.69" y="95.758" size="1.778" layer="96"/>
+<instance part="R6" gate="G$1" x="182.88" y="86.36" smashed="yes">
+<attribute name="NAME" x="176.53" y="87.8586" size="1.778" layer="95"/>
+<attribute name="VALUE" x="186.69" y="88.138" size="1.778" layer="96"/>
 </instance>
 <instance part="U1" gate="G$1" x="-124.46" y="7.62" smashed="yes" rot="MR180">
 <attribute name="NAME" x="-118.11" y="15.24" size="1.778" layer="95" rot="MR180" align="center-left"/>
@@ -13548,13 +13544,20 @@ Created by Upverter.com</description>
 <segment>
 <pinref part="U2" gate="G$1" pin="3V3"/>
 <pinref part="+3V1" gate="G$1" pin="+3V3"/>
-<wire x1="154.94" y1="139.7" x2="175.26" y2="139.7" width="0.1524" layer="91"/>
+<wire x1="154.94" y1="139.7" x2="162.56" y2="139.7" width="0.1524" layer="91"/>
+<wire x1="162.56" y1="139.7" x2="175.26" y2="139.7" width="0.1524" layer="91"/>
 <wire x1="175.26" y1="139.7" x2="175.26" y2="147.32" width="0.1524" layer="91"/>
 <pinref part="LED4" gate="G$1" pin="COMMON_ANODE"/>
 <wire x1="195.58" y1="157.48" x2="182.88" y2="157.48" width="0.1524" layer="91"/>
 <wire x1="182.88" y1="157.48" x2="182.88" y2="139.7" width="0.1524" layer="91"/>
 <wire x1="182.88" y1="139.7" x2="175.26" y2="139.7" width="0.1524" layer="91"/>
 <junction x="175.26" y="139.7"/>
+<pinref part="U2" gate="G$1" pin="EN"/>
+<wire x1="114.3" y1="134.62" x2="106.68" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="134.62" x2="106.68" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="147.32" x2="162.56" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="162.56" y1="147.32" x2="162.56" y2="139.7" width="0.1524" layer="91"/>
+<junction x="162.56" y="139.7"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="G$1" pin="VS"/>
@@ -13623,9 +13626,9 @@ Created by Upverter.com</description>
 <label x="-66.04" y="170.18" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U2" gate="G$1" pin="IO25"/>
-<wire x1="154.94" y1="96.52" x2="162.56" y2="96.52" width="0.1524" layer="91"/>
-<label x="162.56" y="96.52" size="1.27" layer="95" xref="yes"/>
+<pinref part="U2" gate="G$1" pin="IO23"/>
+<wire x1="154.94" y1="99.06" x2="162.56" y2="99.06" width="0.1524" layer="91"/>
+<label x="162.56" y="99.06" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="USB_TXD" class="0">
@@ -13652,13 +13655,6 @@ Created by Upverter.com</description>
 <label x="-2.54" y="177.8" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
-<net name="EN" class="0">
-<segment>
-<pinref part="U2" gate="G$1" pin="EN"/>
-<wire x1="114.3" y1="134.62" x2="106.68" y2="134.62" width="0.1524" layer="91"/>
-<label x="106.68" y="134.62" size="1.27" layer="95" rot="R180" xref="yes"/>
-</segment>
-</net>
 <net name="IO0" class="0">
 <segment>
 <pinref part="U2" gate="G$1" pin="IO0"/>
@@ -13674,9 +13670,9 @@ Created by Upverter.com</description>
 <wire x1="-45.72" y1="208.28" x2="-38.1" y2="208.28" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U2" gate="G$1" pin="IO34"/>
-<wire x1="114.3" y1="116.84" x2="106.68" y2="116.84" width="0.1524" layer="91"/>
-<label x="106.68" y="116.84" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="U2" gate="G$1" pin="IO21"/>
+<wire x1="154.94" y1="104.14" x2="162.56" y2="104.14" width="0.1524" layer="91"/>
+<label x="162.56" y="104.14" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="LEARN_EN" class="0">
@@ -13688,16 +13684,16 @@ Created by Upverter.com</description>
 <wire x1="-2.54" y1="210.82" x2="-2.54" y2="209.55" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U2" gate="G$1" pin="IO35"/>
-<wire x1="114.3" y1="114.3" x2="106.68" y2="114.3" width="0.1524" layer="91"/>
-<label x="106.68" y="114.3" size="1.27" layer="95" rot="R180" xref="yes"/>
+<label x="162.56" y="106.68" size="1.27" layer="95" xref="yes"/>
+<pinref part="U2" gate="G$1" pin="IO19"/>
+<wire x1="154.94" y1="106.68" x2="162.56" y2="106.68" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="WIFI_LED" class="0">
 <segment>
-<pinref part="U2" gate="G$1" pin="IO17"/>
-<wire x1="154.94" y1="111.76" x2="162.56" y2="111.76" width="0.1524" layer="91"/>
-<label x="162.56" y="111.76" size="1.27" layer="95" xref="yes"/>
+<label x="162.56" y="101.6" size="1.27" layer="95" xref="yes"/>
+<pinref part="U2" gate="G$1" pin="IO22"/>
+<wire x1="154.94" y1="101.6" x2="162.56" y2="101.6" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <wire x1="40.64" y1="227.33" x2="38.1" y2="227.33" width="0.1524" layer="91"/>
@@ -13715,13 +13711,6 @@ Created by Upverter.com</description>
 <wire x1="40.64" y1="214.63" x2="38.1" y2="214.63" width="0.1524" layer="91"/>
 <label x="38.1" y="214.63" size="1.27" layer="95" rot="R180" xref="yes"/>
 <pinref part="LED3" gate="G$1" pin="A"/>
-</segment>
-</net>
-<net name="PROFILE_T" class="0">
-<segment>
-<pinref part="U2" gate="G$1" pin="IO19"/>
-<wire x1="154.94" y1="106.68" x2="162.56" y2="106.68" width="0.1524" layer="91"/>
-<label x="162.56" y="106.68" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="N$18" class="0">
@@ -13743,49 +13732,42 @@ Created by Upverter.com</description>
 <wire x1="-71.12" y1="182.88" x2="-76.2" y2="182.88" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$3" class="0">
-<segment>
-<pinref part="R4" gate="G$1" pin="2"/>
-<pinref part="LED4" gate="G$1" pin="GREEN_(CATHODE)"/>
-<wire x1="187.96" y1="104.14" x2="195.58" y2="104.14" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$4" class="0">
 <segment>
 <pinref part="R5" gate="G$1" pin="2"/>
-<wire x1="187.96" y1="101.6" x2="198.12" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="187.96" y1="96.52" x2="198.12" y2="96.52" width="0.1524" layer="91"/>
 <pinref part="LED4" gate="G$1" pin="BLUE_(CATHODE)"/>
-<wire x1="198.12" y1="101.6" x2="198.12" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="198.12" y1="96.52" x2="198.12" y2="104.14" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$9" class="0">
 <segment>
 <pinref part="R6" gate="G$1" pin="2"/>
-<wire x1="187.96" y1="99.06" x2="203.2" y2="99.06" width="0.1524" layer="91"/>
-<wire x1="203.2" y1="99.06" x2="203.2" y2="157.48" width="0.1524" layer="91"/>
+<wire x1="187.96" y1="86.36" x2="203.2" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="203.2" y1="86.36" x2="203.2" y2="157.48" width="0.1524" layer="91"/>
 <pinref part="LED4" gate="G$1" pin="RED_(CATHODE)"/>
 <wire x1="203.2" y1="157.48" x2="198.12" y2="157.48" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$13" class="0">
 <segment>
-<pinref part="U2" gate="G$1" pin="IO21"/>
 <pinref part="R4" gate="G$1" pin="1"/>
-<wire x1="154.94" y1="104.14" x2="177.8" y2="104.14" width="0.1524" layer="91"/>
+<pinref part="U2" gate="G$1" pin="IO26"/>
+<wire x1="154.94" y1="93.98" x2="177.8" y2="93.98" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$14" class="0">
 <segment>
 <pinref part="R5" gate="G$1" pin="1"/>
-<pinref part="U2" gate="G$1" pin="IO22"/>
-<wire x1="177.8" y1="101.6" x2="154.94" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="177.8" y1="96.52" x2="154.94" y2="96.52" width="0.1524" layer="91"/>
+<pinref part="U2" gate="G$1" pin="IO25"/>
 </segment>
 </net>
 <net name="N$15" class="0">
 <segment>
-<pinref part="U2" gate="G$1" pin="IO23"/>
 <pinref part="R6" gate="G$1" pin="1"/>
-<wire x1="154.94" y1="99.06" x2="177.8" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="154.94" y1="86.36" x2="177.8" y2="86.36" width="0.1524" layer="91"/>
+<pinref part="U2" gate="G$1" pin="IO33"/>
 </segment>
 </net>
 <net name="N$11" class="0">
@@ -13897,9 +13879,9 @@ Created by Upverter.com</description>
 <label x="-111.76" y="60.96" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U2" gate="G$1" pin="IO13"/>
-<wire x1="154.94" y1="121.92" x2="162.56" y2="121.92" width="0.1524" layer="91"/>
-<label x="162.56" y="121.92" size="1.27" layer="95" xref="yes"/>
+<label x="162.56" y="132.08" size="1.27" layer="95" xref="yes"/>
+<pinref part="U2" gate="G$1" pin="IO2"/>
+<wire x1="154.94" y1="132.08" x2="162.56" y2="132.08" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="BUTTON_C2" class="0">
@@ -13941,9 +13923,17 @@ Created by Upverter.com</description>
 <label x="-111.76" y="50.8" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U2" gate="G$1" pin="IO2"/>
-<wire x1="154.94" y1="132.08" x2="162.56" y2="132.08" width="0.1524" layer="91"/>
-<label x="162.56" y="132.08" size="1.27" layer="95" xref="yes"/>
+<pinref part="U2" gate="G$1" pin="IO13"/>
+<wire x1="154.94" y1="121.92" x2="162.56" y2="121.92" width="0.1524" layer="91"/>
+<label x="162.56" y="121.92" size="1.27" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="N$3" class="0">
+<segment>
+<pinref part="R4" gate="G$1" pin="2"/>
+<wire x1="187.96" y1="93.98" x2="195.58" y2="93.98" width="0.1524" layer="91"/>
+<pinref part="LED4" gate="G$1" pin="GREEN_(CATHODE)"/>
+<wire x1="195.58" y1="93.98" x2="195.58" y2="104.14" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
