@@ -156,6 +156,17 @@ As the result was not satisfactory, the layout was manually created. Traces of 2
 
 ![PCB Layout](schematics/pcb_top.png)
 ![PCB Layout](schematics/pcb_bottom.png)
+
+Additional refinements were made to the PCB layout based on feedback from Mr. Kremer. The following changes were made:
+- Track width increased to 0.8mm
+- Via drill size increased to 0.9mm
+- All SMD components moved to top layer due to manufacturing constraints
+-
+
+![PCB Layout](schematics/pcb3.png)
+![PCB Layout](schematics/pcb3_top.png)
+![PCB Layout](schematics/pcb3_bottom.png)
+
 ## References
 - [Low power Wifi MCU](https://hackaday.com/2018/12/17/a-deep-dive-into-low-power-wifi-microcontrollers/)
 
