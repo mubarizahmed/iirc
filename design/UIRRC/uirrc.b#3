@@ -2428,7 +2428,6 @@ Created by Upverter.com</description>
 </polygon>
 <wire x1="18.315" y1="53.925" x2="19.635" y2="53.925" width="0.8" layer="1"/>
 <wire x1="19.635" y1="53.925" x2="19.685" y2="53.975" width="0.8" layer="1"/>
-<via x="35.56" y="66.675" extent="1-16" drill="0.9" diameter="1.5"/>
 <wire x1="16.915" y1="56.725" x2="18.315" y2="56.725" width="0" layer="19" extent="1-1"/>
 <wire x1="15.515" y1="56.725" x2="16.915" y2="56.725" width="0" layer="19" extent="1-1"/>
 <wire x1="18.315" y1="55.325" x2="18.315" y2="56.725" width="0" layer="19" extent="1-1"/>
@@ -2437,7 +2436,7 @@ Created by Upverter.com</description>
 <wire x1="15.515" y1="53.925" x2="15.515" y2="55.325" width="0" layer="19" extent="1-1"/>
 <wire x1="16.915" y1="53.925" x2="16.915" y2="55.325" width="0" layer="19" extent="1-1"/>
 <wire x1="18.315" y1="53.925" x2="17.0578" y2="53.6942" width="0" layer="19" extent="1-1"/>
-<wire x1="37.445" y1="72.39" x2="35.56" y2="66.675" width="0" layer="19" extent="1-1"/>
+<wire x1="37.445" y1="72.39" x2="32.065" y2="66.845" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="+3V3">
 <contactref element="U2" pad="2"/>

@@ -1,0 +1,12 @@
+@startuml
+
+[*] --> Standby
+state "<b>Standby</b>\n<i>Waiting for a command</i>" as Standby
+state "<b>Learning</b></b>\n<i>Recieving and storing IR codes</i>" as Learning
+state "<b>Smart</b>\n<i>IoT connected mode</i>" as Smart
+
+Standby --> Learning : Learn Toggle On
+Learning --> Standby : Learn Toggle Off
+Standby --> Smart : Smart Toggle
+
+@enduml

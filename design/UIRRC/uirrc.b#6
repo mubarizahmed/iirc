@@ -3,22 +3,22 @@
 <eagle version="9.6.2">
 <drawing>
 <settings>
-<setting alwaysvectorfont="no"/>
+<setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="25" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="no" active="yes"/>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
 <layer number="20" name="Dimension" color="24" fill="1" visible="yes" active="yes"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="yes"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="yes"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
@@ -32,9 +32,9 @@
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="yes"/>
 <layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
 <layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
-<layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="yes"/>
+<layer number="39" name="tKeepout" color="4" fill="11" visible="yes" active="yes"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="yes" active="yes"/>
-<layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="yes"/>
+<layer number="41" name="tRestrict" color="4" fill="10" visible="yes" active="yes"/>
 <layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
@@ -44,7 +44,7 @@
 <layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="yes"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="53" name="tGND_GNDA" color="7" fill="1" visible="no" active="no"/>
 <layer number="54" name="bGND_GNDA" color="7" fill="1" visible="no" active="no"/>
@@ -2417,22 +2417,12 @@ Created by Upverter.com</description>
 </polygon>
 <wire x1="17.005" y1="53.835" x2="17.0578" y2="53.7822" width="0.2032" layer="1"/>
 <wire x1="17.0578" y1="53.7822" x2="17.0578" y2="53.6942" width="0.2032" layer="1"/>
-<wire x1="17.0578" y1="53.6942" x2="17.145" y2="53.607" width="0.2032" layer="1"/>
-<wire x1="17.145" y1="53.607" x2="17.145" y2="52.705" width="0.2032" layer="1"/>
 <wire x1="43.035" y1="61.635" x2="40.64" y2="59.24" width="0.3048" layer="1"/>
 <wire x1="40.64" y1="59.24" x2="40.64" y2="58.42" width="0.3048" layer="1"/>
 <via x="40.64" y="58.42" extent="1-16" drill="0.6"/>
-<wire x1="16.7468" y1="55.1568" x2="16.915" y2="55.325" width="0.1524" layer="1"/>
 <wire x1="16.915" y1="53.925" x2="17.0832" y2="54.0932" width="0.1524" layer="1"/>
 <wire x1="17.0832" y1="54.0932" x2="17.0832" y2="53.9132" width="0.1524" layer="1"/>
 <wire x1="17.0832" y1="53.9132" x2="17.005" y2="53.835" width="0.1524" layer="1"/>
-<wire x1="18.315" y1="55.325" x2="18.97" y2="55.325" width="0.1524" layer="1"/>
-<wire x1="18.97" y1="55.325" x2="19.05" y2="55.245" width="0.1524" layer="1"/>
-<wire x1="15.515" y1="55.325" x2="15.435" y2="55.245" width="0.1524" layer="1"/>
-<wire x1="15.435" y1="55.245" x2="14.605" y2="55.245" width="0.1524" layer="1"/>
-<wire x1="16.915" y1="56.725" x2="16.915" y2="57.555" width="0.1524" layer="1"/>
-<wire x1="16.915" y1="57.555" x2="17.145" y2="57.785" width="0.1524" layer="1"/>
-<wire x1="15.515" y1="55.325" x2="15.6832" y2="55.1568" width="0.1524" layer="1"/>
 <polygon width="0.0762" layer="1" spacing="2.54">
 <vertex x="14.605" y="57.785"/>
 <vertex x="19.685" y="57.785"/>
@@ -2852,6 +2842,46 @@ Created by Upverter.com</description>
 <mfgpreviewcolor name="coppercolor" color="0xFFFFBF00"/>
 <mfgpreviewcolor name="substratecolor" color="0xFF786E46"/>
 </mfgpreviewcolors>
+<errors>
+<approved hash="1,20,9fe3e19fe05f9e23"/>
+<approved hash="1,20,7161cb1dcb5d7121"/>
+<approved hash="1,20,5d61e31de35d5d21"/>
+<approved hash="1,20,1e00607c603c1e40"/>
+<approved hash="1,20,7201c87dc83d7241"/>
+<approved hash="1,20,5e01e07de03d5e41"/>
+<approved hash="1,20,43e0619c605d4221"/>
+<approved hash="1,20,9d03e37fe0279e5b"/>
+<approved hash="1,20,4300617c61bd43c1"/>
+<approved hash="1,20,1d60631c635c1d20"/>
+<approved hash="1,20,4100637c60254259"/>
+<approved hash="1,20,9f03e17fe1bf9fc3"/>
+<approved hash="19,1,d17dcf28b038cbe4"/>
+<approved hash="19,1,bc8df40442a96fa9"/>
+<approved hash="19,1,dde5c436ba3ec44c"/>
+<approved hash="19,1,bf5dff1a47e76001"/>
+<approved hash="19,1,f99df9bc712c12c4"/>
+<approved hash="19,1,197c468f22b31e89"/>
+<approved hash="19,1,8c34c0f76ab96f1d"/>
+<approved hash="19,1,5cb36697dbeda8ae"/>
+<approved hash="19,1,6ed7fb841b535f65"/>
+<approved hash="19,1,1c8c50033caf15a9"/>
+<approved hash="19,1,fde5e42e6826164c"/>
+<approved hash="19,1,1f5c5b1d39e11a01"/>
+<approved hash="19,1,d99dd9a4a334c0c4"/>
+<approved hash="19,1,f432d0e9f8a30d1d"/>
+<approved hash="19,1,b97de2885cb56489"/>
+<approved hash="19,1,ac3fb0eb9eae7b1f"/>
+<approved hash="19,1,8a9cdfa57453680d"/>
+<approved hash="19,1,70b7e28e1df55ea9"/>
+<approved hash="19,1,f29acfbbe6490a0d"/>
+<approved hash="19,1,ecb36689bff1ccae"/>
+<approved hash="19,1,aa97afb980447c0f"/>
+<approved hash="19,1,42d37f9ddd4ba962"/>
+<approved hash="19,1,f17def30622019e4"/>
+<approved hash="19,1,f2d37f83b957cd62"/>
+<approved hash="3,1,0ae07c3fb2e3c43c"/>
+<approved hash="23,16,d86d0e0b0f86d9e0"/>
+</errors>
 </board>
 </drawing>
 <compatibility>

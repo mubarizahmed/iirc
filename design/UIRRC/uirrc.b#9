@@ -2471,8 +2471,16 @@ Created by Upverter.com</description>
 </signal>
 <signal name="IR_RX">
 <contactref element="IC1" pad="1"/>
-<contactref element="U2" pad="26"/>
-<wire x1="27.165" y1="47.805" x2="18.415" y2="75.745" width="0" layer="19" extent="1-1"/>
+<contactref element="U2" pad="6"/>
+<wire x1="9.665" y1="56.695" x2="8.075" y2="56.695" width="0.3048" layer="1"/>
+<wire x1="8.075" y1="56.695" x2="6.985" y2="57.785" width="0.3048" layer="1"/>
+<wire x1="6.985" y1="57.785" x2="6.985" y2="59.055" width="0.3048" layer="1"/>
+<via x="6.985" y="59.055" extent="1-16" drill="0.6"/>
+<wire x1="6.985" y1="59.055" x2="6.985" y2="71.12" width="0.3048" layer="16"/>
+<wire x1="8.89" y1="73.025" x2="17.78" y2="73.025" width="0.3048" layer="16"/>
+<wire x1="17.78" y1="73.025" x2="18.415" y2="73.66" width="0.3048" layer="16"/>
+<wire x1="18.415" y1="73.66" x2="18.415" y2="75.745" width="0.3048" layer="16"/>
+<wire x1="6.985" y1="71.12" x2="8.89" y2="73.025" width="0.3048" layer="16"/>
 </signal>
 <signal name="N$1">
 <contactref element="LED1" pad="1"/>
