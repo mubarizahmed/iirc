@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "../.git"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../design"
+		},
+		{
+			"path": "../idea"
+		},
+		{
+			"path": "../presentation"
+		},
+		{
+			"path": "../resources"
+		}
+	]
+}
